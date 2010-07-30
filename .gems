@@ -1,2 +1,4 @@
 sinatra
-activerecord
+active_record
+sqlite3
+erb
