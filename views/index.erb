@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>To-Do</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <h1>My shit to do</h1>
+      </div>
+      <div id="content">
+        <ul>
+          <% @items.each do |item| %>
+              <li><%= item.description %></li>
+          <% end %>
+        </ul>
+        <form action="/description" method="post">
+          <fieldset id="form_shit">
+            <label for="description">Add an item</label><input type="text" name="description" value="" id="description" />
+            <label for="submit"></label><input type="submit" name="submit" value="submit" id="submit" />
+          </fieldset>
+        </form>
+      </div>
+      <div id="footer">
+        <p>~</p>
+      </div>  
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+body {background:#D1DBBD;}
+
+#wrapper {
+  width:500px;
+  padding:25px;
+  margin:0 auto;
+  background:#FCFFF5;
+}
+#content ul {
+  list-style-type:none;
+}
+#content ul li {
+  padding:10px 0 5px 0;
+  border-bottom:2px solid black;
+}
