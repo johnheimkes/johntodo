@@ -9,8 +9,6 @@ load 'config/config.rb'
 module JohnToDo
   class App < Sinatra::Base
     
-    set :sessions, true
-    
     get '/' do
       @items = Item.all
       erb :index
