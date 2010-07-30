@@ -1,3 +1,3 @@
 require 'index'
  
-run JohnToDo::App
+run JohnToDo::Application
