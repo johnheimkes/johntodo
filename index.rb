@@ -8,15 +8,19 @@ load 'config/config.rb'
 
 module JohnToDo
   class App < Sinatra::Base
-  get '/' do
-    @items = Item.all
-    erb :index
-  end
-  
-  post '/description' do
     
-    Item.create(:description => params[:description])
+    set :sessions, true
     
-    redirect "/"
+    get '/' do
+      @items = Item.all
+      erb :index
+    end
+    
+    post '/description' do
+      
+      Item.create(:description => params[:description])
+      
+      redirect "/"
+    end
   end
 end
