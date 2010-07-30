@@ -6,14 +6,16 @@ require 'active_record'
 load 'models.rb'
 load 'config/config.rb'
 
-get '/' do
-  @items = Item.all
-  erb :index
-end
-
-post '/description' do
+module JohnToDo
+  get '/' do
+    @items = Item.all
+    erb :index
+  end
   
-  Item.create(:description => params[:description])
-  
-  redirect "/"
+  post '/description' do
+    
+    Item.create(:description => params[:description])
+    
+    redirect "/"
+  end
 end
