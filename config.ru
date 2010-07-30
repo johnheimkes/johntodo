@@ -1,3 +1,3 @@
-require 'app'
+require 'index'
  
 run JohnToDo::App
