@@ -7,6 +7,7 @@ load 'models.rb'
 load 'config/config.rb'
 
 module JohnToDo
+  class App < Sinatra::Base
   get '/' do
     @items = Item.all
     erb :index
